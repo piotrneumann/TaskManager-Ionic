@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TASKS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-label>{{task.title}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-label>{{task.description}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-label>{{task.date}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-icon *ngIf="task.icon == 'MAIL'" name="mail-outline"></ion-icon>
+      <ion-icon *ngIf="task.icon == 'MEETING'" name="chatbubbles-outline"></ion-icon>
+      <ion-icon *ngIf="task.icon == 'WORK'" name="alarm-outline"></ion-icon>
+      <ion-icon *ngIf="task.icon == 'SHOP'" name="cart-outline"></ion-icon>
+    </ion-item>
+
+
+</ion-content>

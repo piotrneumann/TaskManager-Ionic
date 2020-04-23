@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            TASKS
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <form>
+        <ion-item>
+            <ion-label>Title</ion-label>
+            <ion-input type="text" [(ngModel)]="task.title" name="title"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Description</ion-label>
+            <ion-textarea [(ngModel)]="task.description" name="description"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc" [(ngModel)]="task.date" name="date"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Type</ion-label>
+            <ion-select value="brown" okText="Okay" cancelText="Dismiss" [(ngModel)]="task.icon" name="type">
+                <ion-select-option value="MEETING">Meeting</ion-select-option>
+                <ion-select-option value="WORK">Work</ion-select-option>
+                <ion-select-option value="MAIL">Mail</ion-select-option>
+                <ion-select-option value="SHOP">Shop</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-button expand="block" (click)="logForm()">Save</ion-button>
+    </form>
+</ion-content>
+
+
